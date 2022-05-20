@@ -1,0 +1,210 @@
+@charset "utf-8";
+
+/* 전체 폰트 정리 */
+
+/* 구글 폰트 연결-> */
+/* 
+메인 폰트
+font-family: 'Akshar', sans-serif;
+
+서브 폰트
+font-family: 'Quicksand', sans-serif;
+ */
+
+
+/* 공통점 -> div > article, header -> 가로 사이트 중앙위치 */
+div>article,div>header{
+    width: 1155px;
+    margin: 0 auto;
+    /* background-color: pink; */
+}
+/* header{
+    width: 1155px;
+    margin: 0 auto;
+} */
+
+
+/* #wrap -> div  위 아래 여백 */
+#wrap>div{
+    padding: 70px 0;
+}
+
+/* header  우선권 문제가 있어 #header를 붙여준다*/
+#wrap>#header{
+    padding: 0 0;
+}
+
+/* article -> h3 > 폰트정리 구글 폰트에서 가져온 폰트 사이즈, 정렬, 컬러, 아래여백  */
+div>article>h3{
+    font: 70px 'Akshar', sans-serif;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 50px;
+}
+img{
+    max-width: 100%;
+}
+
+/* 공통공통 hide  */
+
+.hide{
+    width: 0; height: 0;
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    visibility: hidden;
+  }
+
+/* 공통공통 html > font연결 font-size 영문 light */
+
+html{
+    font: 16px '나눔고딕', sans-serif;
+    color: #666666;
+}
+
+
+/*  */
+/*  */
+/*  */
+/* a-index : 바디,헤더 900 모달 2500 어사이드 2000  */
+
+/* 위아래 여백, 배경칼라, 투명도, 픽스드, 좌표값, 가로크기 */
+/* 아이콘 앱솔루트,좌표값,크기(가로세로) */
+#wrap>#header{
+     padding: 20px 0;
+     background-color: rgba(60, 32, 61, 0.5);
+     position: fixed;
+     left: 0; top: 0;
+     width: 100%;
+     z-index: 900;
+}
+
+#header>header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#header>header a{
+    color: #fff;
+    text-decoration: none;
+}
+#header>header>h1{
+    width: 170px;
+    font: 33px 'Akshar', sans-serif;
+   
+}
+#header>header>nav>ul{
+    width: 340px;
+    display: flex;
+    justify-content: space-around;
+}
+#header>header>nav>ul>li{
+    font: 17px 'Akshar', sans-serif;
+    text-align: center;
+}
+
+#header .btn{
+    position: absolute;
+    width: 40px; height: 40px;
+    background-color: red;
+    right: 20px; top: 20px;
+    
+}
+
+/* ---------box01------------------------- */
+
+#wrap>#box01{
+    height: 100vh;
+    background: url(../images/header_back.png) no-repeat center top;
+    padding: 0;
+}
+
+#box01>article{
+    position: relative;
+    height: 100%;
+    
+}
+#box01>article>h3{
+    position: absolute;
+    top:24.4444444%; left: 0;
+    width: 100%;
+    font-size: 75px;
+    color: #fff;
+}
+#box01>article>ul{
+    position: absolute;
+    left: 0; bottom: 18.3574879%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    color: #fff;
+}
+#box01>article>ul>li{
+    width: 33.33333%;
+}
+#box01>article>ul>li>dl{
+    width: 225px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.5;
+}
+#box01>article>ul>li>dl>dt{
+    margin-bottom: 10px;
+}
+#box01>article>ul>li>dl>dd{}
+
+#box01>article>ul>li>span{
+    display: block;
+    margin: 0 auto 20px;
+    width: 225px; height: 225px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.7) url(../images/header_icon_01.png) no-repeat center;
+}
+#box01>article>ul>li:nth-child(2)>span{
+    background-image: url(../images/header_icon_02.png);
+}
+#box01>article>ul>li:nth-child(3)>span{
+    background-image: url(../images/header_icon_03.png);
+}
+
+
+/* ----------box02-------------- */
+
+#box02{
+    background-color: #e8e8e8;
+}
+#box02>article{
+    
+}
+
+
+#box02>article>#info{
+    margin-bottom: 68px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#box02>article h4{
+    width: 290px;
+    margin-left: 25px;
+}
+#box02>article ul{
+    width: 628px;
+    margin-right: 105px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+}
+
+#info>ul>li{
+    display: flex;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+#info>ul>li>dfn{
+    width: 152px;
+}
+#info>ul>li>span{
+    width: 468px;
+}
+
