@@ -440,7 +440,7 @@ footer{
 
 /* modal */
 #modal{
-    display: none;
+    display: block;
     position: fixed;
     width: 100%;
     height: 100%;
@@ -497,4 +497,7 @@ footer{
     margin-bottom: 25px;
     padding-bottom: 20px;
     border-bottom: 1px solid #aaa;
+}
+#modal section>div>dl>dd>a{
+    color: #333;
 }
