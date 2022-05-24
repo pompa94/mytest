@@ -14,7 +14,7 @@ font-family: 'Quicksand', sans-serif;
 
 /* 공통점 -> div > article, header -> 가로 사이트 중앙위치 */
 div>article,div>header{
-    width: 98%/* 1155px */;
+    width: 1155px;
     margin: 0 auto;
     /* background-color: pink; */
 }
@@ -111,8 +111,7 @@ a{
     position: absolute;
     width: 40px; height: 40px;
     background-color: red;
-    right: 20px; top: 15px;
-    display: none;
+    right: 20px; top: 20px;
     
 }
 
@@ -188,11 +187,10 @@ a{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-content: center;
 }
 #box02>article>#info>h4{
-    width: 25.57319223%/* 290px */;
-    margin-left: 2.20458553791%/* 25px */;
+    width: 290px;
+    margin-left: 25px;
 }
 #box02>article ul{
     
@@ -201,8 +199,8 @@ a{
     align-content: stretch; */
 }
 #info>ul{
-    width: 55.379188712%/* 628px */;
-    margin-right: 9.2592592592%/* 105px */;
+    width: 628px;
+    margin-right: 105px;
     line-height: 1.8;
     display: flex;
     flex-direction: column;
@@ -214,11 +212,10 @@ a{
     flex-wrap: wrap;
 }
 #info>ul>li>dfn{
-    /* 628 */
-    width: 24.20382165605%/* 152px */;
+    width: 152px;
 }
 #info>ul>li>span{
-    width: 74.522292993630%/* 468px */;
+    width: 468px;
 }
 
 
@@ -230,12 +227,12 @@ a{
 }
 
 #skill>h4{
-    width: 25.57319223%/* 290px */;
+    width: 290px;
     text-align: center;
     margin-left: 25px;
 }
 #skill>ul{
-    width: 55.379188712%/* 628px */;
+    width: 628px;
     margin-right: 105px;
     line-height: 34px;
 }
@@ -310,7 +307,6 @@ a{
     margin-bottom: 69px;
 }
 #all>figure>img{
-    /* 980 */
     width: 257px;
     margin: 0 auto 24px;
     border-radius: 50%;
