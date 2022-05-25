@@ -178,8 +178,352 @@
         display: none;
     }
 
+    /* 모달 */
+    #modal{
+        display: none;
+        padding: 10vh 5vw 5vh;
+        box-sizing: border-box;
+    }
+    #modal>p{
+        position: fixed;
+        width: 30px;
+        height: 30px;
+        right: 2.5vw;
+        top: 2.5vw;
+        background-color: red;
+    }
+    
+    #modal section{
+        position: static;
+        width: 100%;
+        height: 100%;
+        margin: 0px 0 0 0px;
+        background-color: #fff;
+        padding: 0 5vw 5vh;
+    }
+    
+    #modal section>h5{
+        font-size: 25px;
+        /* margin-bottom : 5vh */
+        margin-bottom: 0;
+        text-align: center;
+        line-height: 5vh;
+    }
+    #modal section>div{
+        display: block;
+    }
+    #modal section>div>figure{
+        width: 100%;
+        text-align: center;
+        height: 45vh;
+        overflow: hidden;
+    }
+    #modal section>div>figure>figcaption{
+        display: none;
+    }
+    #modal section>div>dl{
+        width: 100%;
+        line-height: 5vh;
+        box-sizing: border-box;
+        overflow: hidden;
+        /* 80vw */
+    }
+    #modal section>div>dl>dt{
+        width: 30vw;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    #modal section>div>dl>dd{
+        width: 50vw;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
 }
 
 @media screen and (max-width:579px){
+    /* 공통부분 */
+    div>article,div>header{
+        width: 90vw/* 1155px */;
+        /* background-color: pink; */
+    }
+    #wrap>div{
+        padding: 35px 0;
+    }
+    div>article>h3{
+        font: 36px 'Akshar', sans-serif;
+        text-align: left;
+        margin-bottom: 33px;
+    }
+    #wrap>#header{
+        padding: 20px 0;
+        background-color: rgba(18, 3, 22, 0.91);
+   }
+    #header>header{
+        display: block;
+        text-align: center;
+    }
+    #header>header>h1{
+        font: 25px 'Akshar', sans-serif;
+       width:auto;
+    }
+
+    #header>header>nav{
+        position: fixed;
+        left: -100vw; top: 0;
+        z-index: 2500;
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        height: 100%;
+        padding: 10vh 5vw;
+        box-sizing: border-box;
+        /* display: none; */
+    }
+    #header>header>nav>ul{
+        width:auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+    }
+    #header>header>nav>ul>li{
+        display: block;
+        margin-left: 0px;
+        border-bottom: 1px solid #fff;
+    }
+    #header>header>nav>ul>li>a{
+        line-height: 56px;
+    }
+
+    #header .btn{
+        display: block;
+        right: 20px; top: 15px;
+    }
+    #header nav>.close{
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        width: 35px;
+        height: 35px;
+        background-color: red;
+
+    }
+    /* box01 */
     
+    #box01>article>h3{
+        top:50%; left: 50%;
+        width: 50vw;
+        /* width: 100%; */
+        color: #fff;
+        font-size:35px;
+        text-align: center;
+        margin: -17px 0 0 -25vw;
+
+    }
+    #box01>article>ul{
+        display: none;
+    }
+
+
+
+    /* box02 */
+    #box02>article>#info{
+        display: block;
+        margin-bottom: 35px;
+    }
+
+    #box02>article>#info>h4{
+        width: 40vw;
+        margin-left: 0;
+        margin: 0 auto 35px;
+    }
+    #info>ul{
+        width: 80vw;
+        margin-right: 0;
+        display: block;
+        margin: 0 auto;
+    }
+
+    #info>ul>li{
+        display: flex;
+        margin-bottom: 15px;
+        flex-wrap: wrap;
+    }
+    #info>ul>li>dfn{
+        /* 628 */
+        width: 27.5vw/* 152px */;
+    }
+    #info>ul>li>span{
+        width: 52.5vw/* 468px */;
+    }
+
+
+    #skill{
+        display: block;
+        width: 80vw;
+        margin: 0 auto;
+    }
+    
+    #skill>h4{
+        display: none;
+    }
+    #skill>ul{
+        width: 80vw/* 628px */;
+        margin-right: 0;
+        margin: 0 auto;
+    }
+    #skill>ul>li{
+        position: static;
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+    #skill>ul>li>dfn{
+        position: static;
+        width: 27.5vw;
+    }
+    #skill>ul>li>span{
+        display: block;
+        width: 52.5vw;
+        margin-left: 0;
+    }
+
+    /* box03 */
+    /* #wrap>#box03{
+        width: 100%;
+        margin-bottom: 45px;
+    } */
+
+    #gallery>#show{
+        /* 15*2->30vw */
+        width: 65vw;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    #gallery>#show>#all{
+        width: 390vw;
+        /* flex-wrap: nowrap; */
+    }
+    #all>figure{
+        width: 65vw;
+        margin-bottom: 25;
+        
+    }
+    #all>figure>img{
+        /* 980 */
+        width: /* 100% */100%;
+        border-radius: 0;
+    }
+    /* figure-> 15col-> 30vw */
+
+    /* button */
+    #gallery>p{
+        position: absolute;
+        width: 7.7vw; 
+        height: 7.7vw;
+        background-color: red;
+        top: 50%;
+        margin-top: -3.4vw;
+        display: block;
+    }
+   
+
+    /* box04 */
+    
+    #box04>article>form ul>li{
+        padding-left: 0;
+    }
+    #box04>article>form ul>li>span>label{
+        position: absolute;
+        width: auto;
+        left: 0; top: 0;
+        /* color: #fff; */
+        /* text-align: center; */
+        padding-left: 0;
+        background: none;
+        color: red;
+        text-indent: 30px;
+    }
+    #box04>article>form ul>li:nth-child(2)>span>label{
+        background-image: none;
+    }
+    #box04>article>form ul>li:nth-child(3)>span>label{
+        background-image: none;
+    }
+    #box04>article>form ul>li:nth-child(4)>span>label{
+        background-image:none;
+    }
+    #box04>article>form>fieldset>p{
+        text-align: left;
+    }
+    #box04>article>form>fieldset>p>input{
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    aside{
+        display: none;
+    }
+
+/* 모달 */
+    #modal{
+        display: none;
+        padding: 10vh 5vw 5vh;
+        box-sizing: border-box;
+    }
+    #modal>p{
+        position: fixed;
+        width: 30px;
+        height: 30px;
+        right: 2.5vw;
+        top: 2.5vw;
+        background-color: red;
+    }
+    
+    #modal section{
+        position: static;
+        width: 100%;
+        height: 100%;
+        margin: 0px 0 0 0px;
+        background-color: #fff;
+        padding: 0 5vw 5vh;
+    }
+    
+    #modal section>h5{
+        font-size: 25px;
+        /* margin-bottom : 5vh */
+        margin-bottom: 0;
+        text-align: center;
+        line-height: 5vh;
+    }
+    #modal section>div{
+        display: block;
+    }
+    #modal section>div>figure{
+        width: 100%;
+        text-align: center;
+        height: 45vh;
+        overflow: hidden;
+    }
+    #modal section>div>figure>figcaption{
+        display: none;
+    }
+    #modal section>div>dl{
+        width: 100%;
+        line-height: 5vh;
+        box-sizing: border-box;
+        overflow: hidden;
+        /* 80vw */
+    }
+    #modal section>div>dl>dt{
+        width: 30vw;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    #modal section>div>dl>dd{
+        width: 50vw;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+   
 }
