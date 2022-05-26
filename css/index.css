@@ -93,7 +93,7 @@ a{
     text-decoration: none;
 }
 #header>header>h1{
-    width: 170px;
+    /* width: 170px; */
     font: 33px 'Akshar', sans-serif;
    
 }
