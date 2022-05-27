@@ -133,7 +133,6 @@ a{
     position: absolute;
     top:24.4444444%; left: 0;
     width: 100%;
-    font-size: 75px;
     color: #fff;
 }
 #box01>article>ul{
@@ -292,6 +291,7 @@ a{
 }
 #box03>article>ul>li>a{
     font-size: 18px;
+    color: #333;
 }
 
 #gallery{
