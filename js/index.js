@@ -18,6 +18,11 @@ $(function(){
     let windowW = $(window).width();
     // console.log(windowW);
 
+    // resize -> reset
+    $(window).on('resize',function(e){
+        window.location.reload();
+    })
+
     if(windowW > 1134){ 
         nav();
         aside();
@@ -28,9 +33,12 @@ $(function(){
     }
     else if(windowW <=980 && windowW > 580){
         tNav();
+        gallery();
     }
     else if(windowW <= 580){
         tNav();
+        gallery();
+        formData();
     }
 
     // 함수
@@ -102,7 +110,58 @@ $(function(){
     }
 
     // 4.gallery
+// console.log($('#box03 #all figure').width());
+// console.log($('#box03 #all figure').outerWidth(true)); -> figure 1개의 크기
+
+// 준비하기
+
+function gallery(){
+    const figureW = $('#box03 #all figure').outerWidth(true);
+    $('#all figure:last').prependTo('#all');
+    $('#all').css('margin-left','-'+figureW+'px')
+
+    // 이벤트 
+    $('#box03 .prev').on('click',function(e){
+        $('#all').animate({marginLeft : '+='+figureW+'px'},500,function(){
+            $('#all figure:last').prependTo('#all');
+            $('#all').css('margin-left','-'+figureW+'px');
+            return false
+        });
+        
+        
+    })
+    $('#box03 .next').on('click',function(e){
+        $('#all').animate({marginLeft : '-='+figureW+'px'},500,function(){
+            $('#all figure:first').appendTo('#all');
+            $('#all').css('margin-left','-'+figureW+'px');
+            
+        return false
+        });
+    })
+}
+
+// from ->mobile
+function formData(){
+
+    let $liForm = $('#box04 li>span>input,#box04 li>span>textarea');
+    $liForm.removeAttr('placeholder');
+    $liForm.on('focus',function(e){
+        $(this).prev('label').fadeOut(500);
+    });
+    $liForm.on('blur',function(e){
+
+       let str = $(this).val();
+       if(str == ''){
+           $(this).prev('label').fadeIn();
+       }
+    });
+}
+
+
 
     // 5.modal
+
+
+    // 리셋 맨위에
 
 })
