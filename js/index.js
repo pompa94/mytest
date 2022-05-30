@@ -165,3 +165,117 @@ function formData(){
     // 리셋 맨위에
 
 })
+
+// 객체생성
+
+
+
+
+// 1. 생성자 함수
+function Modal(year,pic,title,text,program,url){
+    this.year = year;
+    this.pic = pic;
+    this.title = title;
+    this.text = text;
+    this.program = program;
+    this.url = url;
+}
+
+// 2. 프로토타입
+Modal.prototype.action = function(){
+  
+
+    const moH5 = document.querySelector('#modal h5');
+
+    const moImg = document.querySelector('#modal figure>img');
+
+    const figcaption = document.querySelector('#modal figure>figcaption');
+
+    const moYear = document.querySelector('#modal .year');
+
+    const moProgram = document.querySelector('#modal .program');
+
+    const moUrl = document.querySelector('#modal .url>a');
+
+    const motext = document.querySelector('#modal .text');
+
+
+
+    
+
+    // 데이터 넣기
+    moH5.innerHTML = this.title;
+    moImg.setAttribute('src',this.pic);
+    figcaption.innerHTML = this.title;
+    moYear.innerHTML = this.year;
+    moProgram.innerHTML = this.program;
+    moUrl.setAttribute('href',this.url);
+    motext.innerHTML = this.text;
+}
+
+let source = [
+    new Modal('2022',
+                  './images/pic01.png',
+                  'title01',
+                  'text01',
+                  '프로그램1',
+                  'http://aaa1.co.kr'),
+    new Modal('2022',
+                  './images/pic02.png',
+                  'title02',
+                  'text02',
+                  '프로그램2',
+                  'http://aaa2.co.kr'),
+    new Modal('2022',
+                  './images/pic03.png',
+                  'title03',
+                  'text03',
+                  '프로그램3',
+                  'http://aaa3.co.kr'),
+    new Modal('2022',
+                  './images/pic04.png',
+                  'title04',
+                  'text04',
+                  '프로그램4',
+                  'http://aaa4.co.kr'),
+    new Modal('2022',
+                  './images/pic03.png',
+                  'title05',
+                  'text05',
+                  '프로그램5',
+                  'http://aaa5.co.kr'),
+    new Modal('2022',
+                  './images/pic02.png',
+                  'title06',
+                  'text06',
+                  '프로그램6',
+                  'http://aaa6.co.kr'),
+]
+
+
+
+// 3. 이벤트
+const moBtn = document.querySelectorAll('#box03 figure');
+const close = document.querySelector('#modal p.close');
+// 클릭
+
+
+
+
+
+moBtn.forEach(function(value){
+    value.addEventListener('click',play);
+});
+// 닫기
+close.addEventListener('click',stop);
+
+function play(){
+    document.querySelector('#modal').style.display = 'block';
+    let num = this.getAttribute('name');
+    console.log(num);
+    source[num].action();
+}
+
+function stop(){
+    document.querySelector('#modal').style.display = 'none';
+}
